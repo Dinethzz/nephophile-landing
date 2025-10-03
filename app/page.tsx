@@ -21,7 +21,7 @@ export default function Home() {
         {/* Header */}
         <header className="text-center mb-16 sm:mb-24">
           <div className="inline-block mb-6 animate-bounce">
-            <div className="text-6xl sm:text-7xl">☁️</div>
+            <div className="text-6xl sm:text-7xl">🌥️</div>
           </div>
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent font-[family-name:var(--font-dancing-script)]">
             nephophile
@@ -47,17 +47,14 @@ export default function Home() {
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 sm:mb-24">
           <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
-            <div className="text-4xl mb-4">📸</div>
             <h3 className="text-xl font-semibold mb-2">Share Sky Moments</h3>
             <p className="text-gray-300">Capture and share stunning sky photos and videos</p>
           </div>
           <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
-            <div className="text-4xl mb-4">💬</div>
             <h3 className="text-xl font-semibold mb-2">Connect & Inspire</h3>
             <p className="text-gray-300">Engage with fellow sky enthusiasts worldwide</p>
           </div>
           <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
-            <div className="text-4xl mb-4">🌅</div>
             <h3 className="text-xl font-semibold mb-2">Daily Sky Stories</h3>
             <p className="text-gray-300">Share quotes and stories about endless possibilities</p>
           </div>
