@@ -1,4 +1,7 @@
 import Image from "next/image";
+import feedScreenshot from "./images/Screenshot 2025-10-03 182303.png";
+import notificationsScreenshot from "./images/Screenshot 2025-10-03 182339.png";
+import profileScreenshot from "./images/Screenshot 2025-10-03 182357.png";
 
 export default function Home() {
   return (
@@ -32,12 +35,13 @@ export default function Home() {
         </header>
 
         {/* Coming Soon Badge */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
-            <span className="text-xl sm:text-2xl font-bold uppercase tracking-wider">
-              Coming Soon
-            </span>
-          </div>
+        <div className="text-center mb-12">
+          <p className="text-lg sm:text-xl text-gray-300 mb-2">
+            Clouds are gathering…
+          </p>
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+            stay tuned.
+          </p>
         </div>
 
         {/* Feature Highlights */}
@@ -70,10 +74,11 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="/api/placeholder/375/812" 
+                  <Image 
+                    src={feedScreenshot}
                     alt="Nephophile Feed Screenshot"
                     className="w-full h-auto"
+                    priority
                   />
                 </div>
                 <p className="text-center mt-4 text-sm font-medium text-blue-200">Share & Discover</p>
@@ -82,31 +87,31 @@ export default function Home() {
 
             {/* Screenshot 2 - Notifications */}
             <div className="group relative transform hover:scale-105 transition-all duration-300 md:mt-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-300 to-blue-300 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="/api/placeholder/375/812" 
+                  <Image 
+                    src={notificationsScreenshot}
                     alt="Nephophile Notifications Screenshot"
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-center mt-4 text-sm font-medium text-purple-200">Stay Connected</p>
+                <p className="text-center mt-4 text-sm font-medium text-sky-200">Stay Connected</p>
               </div>
             </div>
 
             {/* Screenshot 3 - Profile */}
             <div className="group relative transform hover:scale-105 transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-blue-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-300 to-blue-300 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="/api/placeholder/375/812" 
+                  <Image 
+                    src={profileScreenshot}
                     alt="Nephophile Profile Screenshot"
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-center mt-4 text-sm font-medium text-pink-200">Your Sky Gallery</p>
+                <p className="text-center mt-4 text-sm font-medium text-sky-200">Your Sky Gallery</p>
               </div>
             </div>
           </div>
