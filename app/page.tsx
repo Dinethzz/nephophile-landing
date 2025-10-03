@@ -1,9 +1,50 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import feedScreenshot from "./images/Screenshot 2025-10-03 182303.png";
 import notificationsScreenshot from "./images/Screenshot 2025-10-03 182339.png";
 import profileScreenshot from "./images/Screenshot 2025-10-03 182357.png";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/sh16knppyx70j", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              waitlist: email,
+            },
+          ],
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setMessage("Thank you! You've been added to our waitlist. ☁️");
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("error");
+      setMessage("Oops! Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-900 via-purple-900 to-indigo-950 text-white overflow-hidden">
       {/* Animated stars background */}
@@ -123,19 +164,29 @@ export default function Home() {
             <p className="text-gray-300 mb-6">
               Join our waitlist and get notified when we launch
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full sm:flex-1 px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={status === "loading"}
+                className="w-full sm:flex-1 px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-purple-400 disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                disabled={status === "loading"}
+                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Notify Me
+                {status === "loading" ? "Sending..." : "Notify Me"}
               </button>
             </form>
+            {message && (
+              <p className={`mt-4 text-sm ${status === "success" ? "text-green-300" : "text-red-300"}`}>
+                {message}
+              </p>
+            )}
           </div>
         </div>
 
