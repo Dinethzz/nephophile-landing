@@ -2,101 +2,156 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-b from-sky-900 via-purple-900 to-indigo-950 text-white overflow-hidden">
+      {/* Animated stars background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '10%', left: '20%', animationDelay: '0s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '20%', left: '80%', animationDelay: '1s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '60%', left: '10%', animationDelay: '2s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '80%', left: '70%', animationDelay: '1.5s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '40%', left: '50%', animationDelay: '0.5s' }}></div>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        
+        {/* Header */}
+        <header className="text-center mb-16 sm:mb-24">
+          <div className="inline-block mb-6 animate-bounce">
+            <div className="text-6xl sm:text-7xl">☁️</div>
+          </div>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent font-[family-name:var(--font-dancing-script)]">
+            nephophile
+          </h1>
+          <p className="text-xl sm:text-2xl lg:text-3xl text-blue-100 mb-4 italic">
+            The sky never repeats the same art
+          </p>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+            A social platform for sharing the ever-changing beauty of the sky
+          </p>
+        </header>
+
+        {/* Coming Soon Badge */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
+            <span className="text-xl sm:text-2xl font-bold uppercase tracking-wider">
+              Coming Soon
+            </span>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 sm:mb-24">
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
+            <div className="text-4xl mb-4">📸</div>
+            <h3 className="text-xl font-semibold mb-2">Share Sky Moments</h3>
+            <p className="text-gray-300">Capture and share stunning sky photos and videos</p>
+          </div>
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
+            <div className="text-4xl mb-4">💬</div>
+            <h3 className="text-xl font-semibold mb-2">Connect & Inspire</h3>
+            <p className="text-gray-300">Engage with fellow sky enthusiasts worldwide</p>
+          </div>
+          <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-all">
+            <div className="text-4xl mb-4">🌅</div>
+            <h3 className="text-xl font-semibold mb-2">Daily Sky Stories</h3>
+            <p className="text-gray-300">Share quotes and stories about endless possibilities</p>
+          </div>
+        </div>
+
+        {/* App Screenshots */}
+        <div className="mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-100">
+            Sneak Peek
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Screenshot 1 - Feed */}
+            <div className="group relative transform hover:scale-105 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/api/placeholder/375/812" 
+                    alt="Nephophile Feed Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <p className="text-center mt-4 text-sm font-medium text-blue-200">Share & Discover</p>
+              </div>
+            </div>
+
+            {/* Screenshot 2 - Notifications */}
+            <div className="group relative transform hover:scale-105 transition-all duration-300 md:mt-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/api/placeholder/375/812" 
+                    alt="Nephophile Notifications Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <p className="text-center mt-4 text-sm font-medium text-purple-200">Stay Connected</p>
+              </div>
+            </div>
+
+            {/* Screenshot 3 - Profile */}
+            <div className="group relative transform hover:scale-105 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-blue-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="/api/placeholder/375/812" 
+                    alt="Nephophile Profile Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <p className="text-center mt-4 text-sm font-medium text-pink-200">Your Sky Gallery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mb-12">
+          <div className="max-w-2xl mx-auto p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              Be the First to Know
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Join our waitlist and get notified when we launch
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full sm:flex-1 px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+              />
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Notify Me
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <blockquote className="text-xl sm:text-2xl italic text-blue-100">
+            "Every time I look up, I'm reminded that the sky never looks the same twice — 
+            always changing, yet always beautiful."
+          </blockquote>
+        </div>
+
+      </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 text-center py-8 border-t border-white/10">
+        <p className="text-gray-400">
+          © 2025 Nephophile. Made with ☁️ for sky lovers everywhere.
+        </p>
       </footer>
     </div>
   );
