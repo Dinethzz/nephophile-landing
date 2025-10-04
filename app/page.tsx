@@ -54,6 +54,34 @@ export default function Home() {
         <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '60%', left: '10%', animationDelay: '2s' }}></div>
         <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '80%', left: '70%', animationDelay: '1.5s' }}></div>
         <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '40%', left: '50%', animationDelay: '0.5s' }}></div>
+        
+        {/* Additional stars */}
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '15%', left: '45%', animationDelay: '0.3s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '25%', left: '30%', animationDelay: '1.2s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '35%', left: '85%', animationDelay: '0.8s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '45%', left: '15%', animationDelay: '1.7s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '55%', left: '65%', animationDelay: '0.4s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '65%', left: '40%', animationDelay: '1.3s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '75%', left: '25%', animationDelay: '0.9s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '85%', left: '55%', animationDelay: '1.6s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '5%', left: '60%', animationDelay: '0.2s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '12%', left: '75%', animationDelay: '1.4s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '22%', left: '5%', animationDelay: '0.7s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '32%', left: '90%', animationDelay: '1.1s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '42%', left: '35%', animationDelay: '0.6s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '52%', left: '95%', animationDelay: '1.8s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '62%', left: '50%', animationDelay: '0.1s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '72%', left: '8%', animationDelay: '1.9s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '90%', left: '45%', animationDelay: '0.5s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '8%', left: '88%', animationDelay: '1.5s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '18%', left: '52%', animationDelay: '0.3s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '28%', left: '12%', animationDelay: '2.1s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '38%', left: '68%', animationDelay: '0.9s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '48%', left: '22%', animationDelay: '1.2s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '58%', left: '78%', animationDelay: '0.4s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '68%', left: '92%', animationDelay: '1.7s' }}></div>
+        <div className="absolute w-1 h-1 bg-white rounded-full animate-pulse" style={{ top: '78%', left: '38%', animationDelay: '0.8s' }}></div>
+        <div className="absolute w-0.5 h-0.5 bg-white rounded-full animate-pulse" style={{ top: '88%', left: '82%', animationDelay: '2.0s' }}></div>
       </div>
 
       {/* Main Content */}
@@ -61,7 +89,7 @@ export default function Home() {
         
         {/* Header */}
         <header className="text-center mb-16 sm:mb-24">
-          <div className="inline-block mb-6 animate-bounce">
+          <div className="inline-block mb-6 animate-[fadeInLeft_1s_ease-out_infinite]">
             <Image 
               src="/overcast_3431405.png"
               alt="Overcast Icon"
@@ -87,7 +115,7 @@ export default function Home() {
             Clouds are gathering…
           </p>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
-            stay tuned.
+            Stay tuned...
           </p>
         </div>
 
