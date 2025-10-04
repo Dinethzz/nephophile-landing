@@ -86,7 +86,7 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-gray-300 mb-2">
             Clouds are gathering…
           </p>
-          <p className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
             stay tuned.
           </p>
         </div>
@@ -112,11 +112,23 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-100">
             Sneak Peek
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Screenshot 1 - Feed */}
-            <div className="group relative transform hover:scale-105 transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+          <div className="relative flex justify-center items-center h-[500px] sm:h-[600px] max-w-6xl mx-auto px-4">
+            {/* Screenshot 1 - Far Left (Notifications - was center left) */}
+            <div className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-[180px] sm:w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+              <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <Image 
+                    src={notificationsScreenshot}
+                    alt="Nephophile Notifications Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot 2 - Center Left (Feed - was far left) - BIGGER */}
+            <div className="absolute left-[22%] sm:left-[23%] top-1/2 -translate-y-1/2 z-20 w-[240px] sm:w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+              <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
                   <Image 
                     src={feedScreenshot}
@@ -125,29 +137,12 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <p className="text-center mt-4 text-sm font-medium text-blue-200">Share & Discover</p>
               </div>
             </div>
 
-            {/* Screenshot 2 - Notifications */}
-            <div className="group relative transform hover:scale-105 transition-all duration-300 md:mt-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-sky-300 to-blue-300 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
-                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
-                  <Image 
-                    src={notificationsScreenshot}
-                    alt="Nephophile Notifications Screenshot"
-                    className="w-full h-auto"
-                  />
-                </div>
-                <p className="text-center mt-4 text-sm font-medium text-sky-200">Stay Connected</p>
-              </div>
-            </div>
-
-            {/* Screenshot 3 - Profile */}
-            <div className="group relative transform hover:scale-105 transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-r from-sky-300 to-blue-300 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm p-4 rounded-3xl shadow-2xl">
+            {/* Screenshot 3 - Center Right (Profile - was far right) - BIGGER */}
+            <div className="absolute right-[22%] sm:right-[23%] top-1/2 -translate-y-1/2 z-30 w-[240px] sm:w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+              <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
                   <Image 
                     src={profileScreenshot}
@@ -155,7 +150,21 @@ export default function Home() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-center mt-4 text-sm font-medium text-sky-200">Your Sky Gallery</p>
+              </div>
+            </div>
+
+            {/* Screenshot 4 - Far Right (New Screenshot - was center right) */}
+            <div className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-[180px] sm:w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+              <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <Image 
+                    src="/Screenshot-2025-10-04-191919.png"
+                    alt="Nephophile Screenshot"
+                    width={280}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
             </div>
           </div>
