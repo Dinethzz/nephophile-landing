@@ -112,9 +112,11 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-100">
             Sneak Peek
           </h2>
-          <div className="relative flex justify-center items-center h-[500px] sm:h-[600px] max-w-6xl mx-auto px-4">
-            {/* Screenshot 1 - Far Left (Notifications - was center left) */}
-            <div className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-[180px] sm:w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+          
+          {/* Desktop Layout - Hidden on mobile */}
+          <div className="hidden md:block relative h-[600px] max-w-6xl mx-auto px-4">
+            {/* Screenshot 1 - Far Left (Notifications) */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
               <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
                   <Image 
@@ -126,8 +128,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Screenshot 2 - Center Left (Feed - was far left) - BIGGER */}
-            <div className="absolute left-[22%] sm:left-[23%] top-1/2 -translate-y-1/2 z-20 w-[240px] sm:w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+            {/* Screenshot 2 - Center Left (Feed) - BIGGER */}
+            <div className="absolute left-[23%] top-1/2 -translate-y-1/2 z-20 w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
               <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
                   <Image 
@@ -140,8 +142,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Screenshot 3 - Center Right (Profile - was far right) - BIGGER */}
-            <div className="absolute right-[22%] sm:right-[23%] top-1/2 -translate-y-1/2 z-30 w-[240px] sm:w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+            {/* Screenshot 3 - Center Right (Profile) - BIGGER */}
+            <div className="absolute right-[23%] top-1/2 -translate-y-1/2 z-30 w-[280px] transform hover:scale-105 transition-all duration-300 hover:z-40">
               <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
                   <Image 
@@ -153,10 +155,68 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Screenshot 4 - Far Right (New Screenshot - was center right) */}
-            <div className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-[180px] sm:w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
+            {/* Screenshot 4 - Far Right (New Screenshot) */}
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-[220px] transform hover:scale-105 transition-all duration-300 hover:z-40">
               <div className="bg-white/10 backdrop-blur-sm p-3 rounded-3xl shadow-2xl border border-white/20">
                 <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                  <Image 
+                    src="/Screenshot-2025-10-04-191919.png"
+                    alt="Nephophile Screenshot"
+                    width={280}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Layout - Grid on mobile */}
+          <div className="md:hidden grid grid-cols-2 gap-6 max-w-lg mx-auto px-4">
+            {/* Screenshot 1 - Feed */}
+            <div className="transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm p-2 rounded-2xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-xl overflow-hidden shadow-xl">
+                  <Image 
+                    src={feedScreenshot}
+                    alt="Nephophile Feed Screenshot"
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot 2 - Notifications */}
+            <div className="transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm p-2 rounded-2xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-xl overflow-hidden shadow-xl">
+                  <Image 
+                    src={notificationsScreenshot}
+                    alt="Nephophile Notifications Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot 3 - Profile */}
+            <div className="transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm p-2 rounded-2xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-xl overflow-hidden shadow-xl">
+                  <Image 
+                    src={profileScreenshot}
+                    alt="Nephophile Profile Screenshot"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot 4 - New Screenshot */}
+            <div className="transform hover:scale-105 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm p-2 rounded-2xl shadow-2xl border border-white/20">
+                <div className="bg-gray-900 rounded-xl overflow-hidden shadow-xl">
                   <Image 
                     src="/Screenshot-2025-10-04-191919.png"
                     alt="Nephophile Screenshot"
