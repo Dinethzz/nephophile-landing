@@ -20,6 +20,9 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "Nephophile - Coming Soon",
   description: "A social platform for sky lovers to share the ever-changing beauty of the sky",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
