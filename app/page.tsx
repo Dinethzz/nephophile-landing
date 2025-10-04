@@ -98,7 +98,7 @@ export default function Home() {
               className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
             />
           </div>
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-sky-200 to-blue-300 bg-clip-text text-transparent font-[family-name:var(--font-dancing-script)]">
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 text-white font-[family-name:var(--font-dancing-script)]">
             nephophile
           </h1>
           <p className="text-xl sm:text-2xl lg:text-3xl text-blue-100 mb-4 italic">
