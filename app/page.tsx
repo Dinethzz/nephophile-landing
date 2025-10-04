@@ -62,7 +62,13 @@ export default function Home() {
         {/* Header */}
         <header className="text-center mb-16 sm:mb-24">
           <div className="inline-block mb-6 animate-bounce">
-            <div className="text-6xl sm:text-7xl">🌥️</div>
+            <Image 
+              src="/overcast_3431405.png"
+              alt="Overcast Icon"
+              width={80}
+              height={80}
+              className="w-16 h-16 sm:w-20 sm:h-20"
+            />
           </div>
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent font-[family-name:var(--font-dancing-script)]">
             nephophile
