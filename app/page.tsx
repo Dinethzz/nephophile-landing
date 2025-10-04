@@ -65,9 +65,9 @@ export default function Home() {
             <Image 
               src="/overcast_3431405.png"
               alt="Overcast Icon"
-              width={80}
-              height={80}
-              className="w-16 h-16 sm:w-20 sm:h-20"
+              width={100}
+              height={100}
+              className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28"
             />
           </div>
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent font-[family-name:var(--font-dancing-script)]">
